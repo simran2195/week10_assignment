@@ -27,6 +27,12 @@
             text-align: center;
         }
 
+        td > a{
+            font-size: 20px;
+            text-align: center;
+
+        }
+
         table{
             border-collapse: collapse;
             font-size: 64px;
@@ -63,9 +69,8 @@
     </head>
 
     <div>
-        <!-- <table class = "board" align="center"> -->
+        <a>Pick a spot, player {{turn}}</a>
         <table align="center">
-            <a>Pick a spot, player {{turn}}</a>
 
             {% for i in range(3) %}
             <!-- Table row -->
@@ -83,5 +88,12 @@
                 </tr>
             {% endfor %}
         </table>
+
+        <!-- <a style="margin-top:10px" href="/clear" class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Clear
+            </a>
+        <a style="margin-top:10px" href="/help" class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Damn! I Need Help!
+            </a> -->
     </div>
 </html>
