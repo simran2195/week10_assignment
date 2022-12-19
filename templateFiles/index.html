@@ -27,10 +27,14 @@
             text-align: center;
         }
 
+        a{
+            font-size: 40px;
+            text-align: center;
+        }
+
         td > a{
             font-size: 20px;
             text-align: center;
-
         }
 
         table{
@@ -69,9 +73,8 @@
     </head>
 
     <div>
-        <a>Pick a spot, player {{turn}}</a>
         <table align="center">
-
+            <a>Pick a spot, player {{turn}}</a>
             {% for i in range(3) %}
             <!-- Table row -->
                 <tr>
