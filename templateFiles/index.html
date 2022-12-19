@@ -1,0 +1,87 @@
+<!--  how to use css in python_ flask-->
+<!DOCTYPE html>
+<html lang="en">
+<!--  Load CSS in Flask with html-->
+<!-- <link rel="stylesheet" href='/staticFiles/main.css' /> --> 
+
+<!--  Load JavaScript in Flask with html-->
+  <!-- <script>
+    alert("Page has been loaded successfully")
+  </script> -->
+ 
+
+
+    <style>
+
+        .board{
+            border-collapse: collapse;
+            font-size: 32px;
+            border: 1px solid black;
+        }
+
+        td{
+            border: 1.5px solid rgb(76, 76, 157);
+            font-size: 30px; 
+            width: 120px;
+            height: 120px;
+            text-align: center;
+        }
+
+        table{
+            border-collapse: collapse;
+            font-size: 64px;
+
+
+        }
+
+        head{
+            font-size: 90px;
+            text-align: center;
+        }
+
+        .white{
+            background: white;
+        }
+        .black{
+            background: lightblue;
+        }
+
+        .white, .board{
+            width: 400;
+            height: 100;
+            padding: 0px;
+            margin: 0px;
+            text-align: center;
+        } 
+
+    </style>
+    <head align="center">
+        <h1> Welcome to Tic Tac Toe! </h1>
+        <!-- <h2>It's time to play!</h2> -->
+        <!-- <img src="img_2.png" width="400" height="100" >  -->
+        <br><br>
+    </head>
+
+    <div>
+        <!-- <table class = "board" align="center"> -->
+        <table align="center">
+            <a>Pick a spot, player {{turn}}</a>
+
+            {% for i in range(3) %}
+            <!-- Table row -->
+                <tr>
+                    {% for j in range(3) %}
+                    <!-- TD is a Table data cell -->
+                    <td>
+                        {% if game[i][j] %}
+                            {{ game[i][j] }}
+                        {% else %}
+                            <a href="#">Choose spot</a>
+                        {% endif %}
+                    </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</html>
